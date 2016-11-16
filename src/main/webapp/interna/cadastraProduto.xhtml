@@ -1,0 +1,72 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Novo Produto</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+	<h:outputStylesheet library="css" name="cadastraProduto10.css" />
+	<h1>Novo Produto</h1>
+	
+			<h:panelGroup layout="block" styleClass="mensagens">
+			<h:messages style="color:black;" />
+			</h:panelGroup>
+		
+		
+	
+		
+		
+		
+		<h:panelGroup layout="block" styleClass="entrada">
+			<h:panelGrid columns="1" > 
+				<h:form>
+				<p>Nome:</p>
+				<p>
+					<h:inputText styleClass="text-input" value="#{produtoMB.produto.nome}" 
+						required="true" requiredMessage="Nome obrigatório" />
+				</p>
+				
+				<p>Preco:</p>
+				<p><h:inputText styleClass="text-input" value="#{produtoMB.produto.preco}"
+				
+					required="true" requiredMessage="Preco obrigatório" />
+				</p>
+				
+
+				<p>Quantidade:</p>
+				<p><h:inputText styleClass="text-input" value="#{produtoMB.produto.quantidade}"
+					required="true" requiredMessage="Quantidade obrigatória" />
+				</p>
+				<h:selectBooleanCheckbox value="#{produtoMB.produto.fracionavel}" /> Fracionavel
+				
+				
+				<p>Categoria:</p>
+				<p><h:inputText styleClass="text-input" value="#{produtoMB.nomeCategoria}"
+					required="true" requiredMessage="Categoria obrigatória" />
+				</p>
+				
+				
+				<br />
+				
+				
+				<p><h:commandButton styleClass="button" action="#{produtoMB.cadastrar}" 
+					value="Cadastrar" />
+				</p>
+				</h:form>
+				
+				<h:form>
+				<p><h:commandButton styleClass="buttonVer" action="#{menuMB.VoltarMenu}" 
+					value="Voltar ao Menu" />
+				</p>
+				</h:form>
+				
+				
+			</h:panelGrid> 
+			</h:panelGroup>
+			
+	</ui:define>
+</ui:composition>

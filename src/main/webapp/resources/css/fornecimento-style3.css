@@ -1,0 +1,44 @@
+.fatura-table{   
+	border-collapse:collapse;
+}
+
+.fatura-table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #E5E5E5;
+	border-bottom:1px solid #BBBBBB;
+	padding:16px;
+}
+
+.fatura-table-odd-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FFFFFFF;
+	border-top:1px solid #BBBBBB;
+}
+
+.fatura-table-even-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #d9d9d9;
+	border-top:1px solid #BBBBBB;
+}
+
+.button{
+	background-color: #ff0000; 
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    margin-left:10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+.button2:hover {
+	
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

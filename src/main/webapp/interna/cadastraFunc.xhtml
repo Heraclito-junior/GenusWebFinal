@@ -1,0 +1,88 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Cadastrar Funcionario</title>
+	</ui:define>
+
+	<ui:define name="conteudo">		
+		<h:outputStylesheet library="css" name="cadastraProduto10.css" />
+	    <h1>Cadastrar Funcionario</h1>
+	
+			<h:panelGroup layout="block" styleClass="mensagens">
+			<h:messages style="color:black;" />
+			</h:panelGroup>
+		
+		
+	
+		
+		
+		
+		<h:panelGroup layout="block" styleClass="entrada">
+			<h:panelGrid columns="1" > 
+				<h:form>
+				
+				<p>Login:</p>
+				<p><h:inputText styleClass="text-input" value="#{funcionarioMB.funcionario.ID}"
+					required="true" requiredMessage="Nome obrigatório" />
+				</p>
+				
+				
+				<p>Nome:</p>
+				<p><h:inputText styleClass="text-input" value="#{funcionarioMB.funcionario.nome}"
+					required="true" requiredMessage="Nome obrigatório" />
+				</p>
+				
+				<p>Senha:</p>
+				
+				<p><h:inputSecret styleClass="text-input" value="#{funcionarioMB.funcionario.senha}"
+					required="true" requiredMessage="Senha obrigatória" />
+				</p>
+				
+
+				<p>Endereco:</p>
+				<p><h:inputText styleClass="text-input" value="#{funcionarioMB.funcionario.endereco}"
+					required="true" requiredMessage="Endereco obrigatório" />
+				</p>
+				
+				
+				<p>Salario:</p>
+				<p><h:inputText styleClass="text-input" value="#{funcionarioMB.salarioParse}"
+				converterMessage="Por favor digite numeros para o salario."
+					required="true" requiredMessage="Salario obrigatório" />
+					
+				</p>
+				
+				
+				<p>Telefone:</p>
+				<p><h:inputText styleClass="text-input" value="#{funcionarioMB.funcionario.telefone}"
+					required="true" requiredMessage="Telefone obrigatório" />
+				</p>
+				
+				<h:selectOneMenu value="#{funcionarioMB.funcionario.tipoFuncionario}">
+				   <f:selectItem itemValue="gerente" itemLabel="Gerente" />
+				   <f:selectItem itemValue="vendedor" itemLabel="Vendedor" />	   							
+				</h:selectOneMenu>	
+				<br/>
+				
+				
+				
+				<p><h:commandButton styleClass="button" action="#{funcionarioMB.cadastrar}" 
+					value="Cadastrar" />
+				</p>
+				</h:form>
+				
+				<h:form>
+				<p><h:commandButton styleClass="buttonVer" action="#{menuMB.VoltarMenu}" 
+					value="Voltar ao Menu" />
+				</p>
+				</h:form>
+				
+				
+			</h:panelGrid> 
+			</h:panelGroup>
+	</ui:define>
+</ui:composition>

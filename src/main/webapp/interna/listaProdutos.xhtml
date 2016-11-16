@@ -1,0 +1,60 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Produtos</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+	<h:outputStylesheet library="css" name="listacategoria6.css" />
+		<h1>Lista de produtos</h1>
+		<br />
+		
+		<h:dataTable value="#{produtoMB.listaProd}"  var="c"
+		    styleClass="fatura-table"
+    		headerClass="fatura-table-header"
+    		rowClasses="fatura-table-odd-row,fatura-table-even-row">
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+				<h:outputText value="#{c.nome}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Preço</f:facet>
+				<h:outputText value="#{c.preco}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Quantidade</f:facet>
+				<h:outputText value="#{c.quantidade}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Categoria</f:facet>
+				<h:outputText value="#{c.IDcateg.nome}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Fracionavel</f:facet>
+				<h:outputText value="#{c.fracionavel}" />
+			</h:column>
+			
+			
+		</h:dataTable>
+		<br/>
+		
+		
+		<h:form>
+			<h:commandButton styleClass="buttonVer" action="#{menuMB.VoltarMenu()}" 
+				value="Voltar"/>
+		</h:form>
+		
+		
+
+		
+		
+		
+		
+		
+		
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,45 @@
+  <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Login</title>
+	</ui:define>
+	
+	<ui:define name="conteudo">
+	<h:outputStylesheet library="css" name="formatologin-style10.css" />
+	
+	<h:panelGroup layout="block" styleClass="bemvindo">
+	<h1 style="margin-top:130px;margin-left:30px;">Bem-vindo!</h1>
+	</h:panelGroup>
+	
+	<br/>
+		<h:form>
+			
+			<h:panelGroup layout="block" styleClass="mensagens">
+			<h:messages style="color:black;" />
+			</h:panelGroup>
+			
+			<h:panelGroup layout="block" styleClass="entrada">
+			<h:panelGrid columns="2" > 
+				<p>Login:</p>
+				<p>
+					<h:inputText value="#{funcionarioMB.funcionario.ID}" 
+						required="true" requiredMessage="Login obrigatório" />
+				</p>
+				
+				<p>Senha:</p>
+				<p>
+					<h:inputSecret value="#{funcionarioMB.funcionario.senha}" 
+						required="true" requiredMessage="Senha obrigatória" />
+				</p>
+				
+				<p><h:commandButton styleClass="button button2" action="#{funcionarioMB.login}" 
+					value="Login" /></p>
+			</h:panelGrid> 
+			</h:panelGroup>
+		</h:form>
+	</ui:define>
+</ui:composition>

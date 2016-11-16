@@ -1,0 +1,72 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Menu do Vendedor</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+	<h1>Menu Vendedor</h1> 
+		<h:outputStylesheet library="css" name="menu-style10.css" />
+	<br/>
+	
+	<h2></h2>
+	
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Venda" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarVenda()}" 
+					value="Realizar Venda" />
+			
+			</h:form>
+			</h:panelGroup>
+
+			</h:panelGroup>
+			
+			
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Cliente" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarCliente()}" 
+					value="Cadastrar Cliente" />
+			
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
+			
+			
+			
+		<br />
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<h:form>
+		<p><h:commandButton styleClass="buttonSair button2" action="#{menuMB.Sair}" 
+					value="Sair" /></p>
+		</h:form>
+		
+		
+	</ui:define>
+</ui:composition>

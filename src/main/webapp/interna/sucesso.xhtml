@@ -1,0 +1,32 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+
+	<ui:define name="titulo">
+		<title>Cadastro de Contato</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+	<h:outputStylesheet library="css" name="formatologin-style10.css" />
+
+		<h1>Trasação Concluida</h1>
+
+		<h:panelGroup layout="block" styleClass="bemvindo">
+		<h1 style="margin-top:130px;margin-left:30px;">Trasação Concluida</h1>
+		</h:panelGroup>
+
+
+		<h:form>
+			<fieldset>
+
+				<p>
+					<h:commandButton styleClass="button button2" action="#{menuMB.VoltarMenu}"
+						value="Retorne ao menu" />
+				</p>
+			</fieldset>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

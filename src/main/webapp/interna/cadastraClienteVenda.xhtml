@@ -1,0 +1,67 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Cliente</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+						<h:outputStylesheet library="css" name="listacategoria6.css" />
+	
+		
+			<h1>Novo Cliente</h1>
+			
+			<h:messages />
+			<h:panelGroup layout="block" styleClass="entrada">
+			<h:panelGrid columns="1" > 
+			<h:form>
+				<p>CPF:</p>
+				<p>
+					<h:inputText value="#{clienteMB.cpf}"
+						minlength="11"
+						validatorMessage="Número de CPF inválido">
+						<f:validateRegex pattern="[0-9]+" />
+					</h:inputText>
+				</p>
+
+		<h:outputText styleClass="text-input" value="#{vendaContemMB.retornaPreco().valorTotal}" />
+				
+
+				
+				<p>Data:</p>
+				<p><h:inputText value="#{clienteMB.data}"
+					required="true" requiredMessage="Data obrigatoria" />
+				</p>
+				
+				<p>Nome:</p>												
+				<p><h:outputText styleClass="text-input" value="#{clienteMB.nome}" /></p>
+				
+				
+				
+				
+				
+				<p><h:commandButton styleClass="button" action="#{clienteMB.filtrar}" 
+					value="Buscar" /></p>
+					
+		</h:form>
+					<h:form>
+					<p><h:commandButton styleClass="buttonAz" action="#{clienteMB.confirmar}" 
+					value="Confirmar" /></p>
+									</h:form>
+					
+		<h:form>		
+			
+		
+				
+				
+				<h:commandButton styleClass="buttonVer" action="#{menuMB.RedirecionarVenda()}" value="Voltar a Venda" />
+
+			
+		</h:form>
+		</h:panelGrid> 
+		</h:panelGroup>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,171 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Menu do Gerente</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+	<h:outputStylesheet library="css" name="menu-style10.css" />
+
+	<h1>Menu Gerente</h1> 
+	
+	<br/>
+	
+	<h2></h2>
+	
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Categoria" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarCadastrarCategoria}" 
+					value="Cadastrar Categoria" />
+			<h:commandButton styleClass="dropbtn2" action="#{categoriaMB.listar}"
+					 value="Visualizar Categorias" />
+			</h:form>
+			</h:panelGroup>
+
+			</h:panelGroup>
+			
+			
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Produto" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarCadastrarProduto()}" 
+					value="Cadastrar Produto" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarListaProduto()}"
+					 value="Visualizar Produto" />
+					 
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarAlterarProduto()}"
+					 value="Alterar Produto" />
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			
+			
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Funcionarios" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarCadastrarFuncionario()}" 
+					value="Cadastrar Funcionario" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarListaFuncionario()}"
+					 value="Visualizar Funcionario" />
+					 
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Fornecedor" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarCadastrarFornecedor()}" 
+					value="Cadastrar Fornecedor" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarListaFornecedor()}" 
+					value="Lista Fornecedores" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarFornecimento()}"
+					 value="Setar Fornecimento" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.DetalharFornecimento()}"
+					 value="Detalhar Fornecimento" />
+					 
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Fatura" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarComecoFatura()}" 
+					value="Cadastrar Fatura" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarListarFatura()}" 
+				value="Listar Fatura" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarDetalharFatura()}" 
+				value="Detalhar Fatura" />
+			
+					 
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Venda" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarListaVendas()}" 
+					value="Lista de vendas" />
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarDetalharVenda()}" 
+					value="Detalhar Venda" />
+			
+					 
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			<h:panelGroup layout="block" styleClass="dropdown">
+			<h:commandButton styleClass="dropbtn" 
+					value="Clientes" />
+			<h:panelGroup layout="block" styleClass="dropdown-content">
+			<h:form>
+			<h:commandButton styleClass="dropbtn2" action="#{menuMB.RedirecionarListaCliente()}" 
+					value="Lista de Clientes" />
+			
+					 
+			</h:form>
+			</h:panelGroup>
+			</h:panelGroup>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
+			
+			
+			
+		<br />
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<h:form>
+		<p><h:commandButton styleClass="buttonSair button2" action="#{menuMB.Sair}" 
+					value="Sair" /></p>
+		</h:form>
+		
+		
+
+		
+		
+		
+		
+	</ui:define>
+</ui:composition>

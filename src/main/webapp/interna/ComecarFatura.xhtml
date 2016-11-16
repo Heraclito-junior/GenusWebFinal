@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/include/template.xhtml">
+	
+	<ui:define name="titulo">
+		<title>Cadastro Fatura</title>
+	</ui:define>
+
+	<ui:define name="conteudo">
+	<h:outputStylesheet library="css" name="cadastraProduto10.css" />
+	<h1>Inicio Fatura</h1>
+	
+	<h:panelGroup layout="block" styleClass="mensagens">
+			<h:messages style="color:black;" />
+	</h:panelGroup>
+	
+	<h:panelGroup layout="block" styleClass="entrada">
+			<h:panelGrid columns="1" > 
+				<h:form>
+				<p>Nome:</p>
+				<p><h:inputText styleClass="text-input" value="#{comecarMB.fornecedor}"
+					required="true" requiredMessage="Nome obrigatório" />
+				</p>		
+				
+				<h:commandButton styleClass="button" action="#{comecarMB.mudarFornecedor}" 
+					value="Começar" />
+				</h:form>
+				<h:form>		
+			
+				<h:commandButton styleClass="buttonVer" action="#{menuMB.VoltarMenu}" value="Voltar ao Menu" />
+
+			
+				</h:form>
+				
+			</h:panelGrid> 
+			</h:panelGroup>
+		
+		
+		
+		
+	</ui:define>
+</ui:composition>
